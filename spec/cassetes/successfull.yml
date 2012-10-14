@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/questions.json
+    body:
+      encoding: US-ASCII
+      string: multiplechoice[title]=A%20title&multiplechoice[description]=A%20Description&multiplechoice[choices][choice_1]=Choice%201&multiplechoice[choices][choice_2]=Choice%202
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"363f60299b9aba9f95b0dd3db98fb049"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d94fcceedb0bac5cc61e8e64ee42bad0
+      X-Runtime:
+      - '0.019759'
+      Content-Length:
+      - '69'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Sun, 14 Oct 2012 13:59:13 GMT
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _get_feedback_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNlNWExMDA5NjdiOGY4YTAwNzQ0YjE5ZTM0ODAxYTI0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWUwMmIrZWZCaEtmWG9CWU40WjVjU1J3eUlNTjNFTS9sYXhBOEpVbGozUFk9BjsARg%3D%3D--cb6b884d313c9af80e885b214fa0f268d45ed335;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"question":{"admin_link":"26-admin-RR12","feedback_link":"26-RR12"}}'
+    http_version: 
+  recorded_at: Sun, 14 Oct 2012 13:59:13 GMT
+recorded_with: VCR 2.2.5
