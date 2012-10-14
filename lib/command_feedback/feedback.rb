@@ -18,7 +18,8 @@ module CommandFeedback
       }
       options = { :headers => { 'ContentType' => 'application/json' } }
 
-      @response = HTTParty.post "http://localhost:3000/questions.json", :body => body, :options => options
+      hostname = "get-feedback.at"
+      @response = HTTParty.post "http://#{ hostname }/questions.json", :body => body, :options => options
     end
 
     def self.build_choices_hash(choices)

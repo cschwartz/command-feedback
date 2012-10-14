@@ -8,8 +8,8 @@ describe Service do
       VCR.use_cassette "successfull" do
         feedback = Service.get_feedback "A title", ["Choice 1", "Choice 2"], "A Description"
         expect(feedback.successfull?).to eq(true)
-        expect(feedback.admin_link).to eq("26-admin-RR12")
-        expect(feedback.feedback_link).to eq("26-RR12")
+        expect(feedback.admin_link).to eq("http://get-feedback.at/questions/7-admin-RR12")
+        expect(feedback.feedback_link).to eq("http://get-feedback.at/answers/new.7-RR12")
       end
     end
 

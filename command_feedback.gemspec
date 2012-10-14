@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Christian Schwartz"]
   gem.email         = ["christian.schwartz@gmail.com"]
   gem.description   = %q{An API and commandline tool for get-feedback.at}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{An API and commandline tool for get-feedback.at}
   gem.homepage      = "http://www.get-feedback.at"
 
   gem.files         = `git ls-files`.split($/)

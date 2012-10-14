@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/questions.json
+    uri: http://get-feedback.at/questions.json
     body:
       encoding: US-ASCII
       string: multiplechoice[title]=A%20title&multiplechoice[description]=A%20Description&multiplechoice[choices][choice_1]=Choice%201&multiplechoice[choices][choice_2]=Choice%202
@@ -10,34 +10,38 @@ http_interactions:
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
+      Date:
+      - Sun, 14 Oct 2012 15:32:14 GMT
+      Server:
+      - Apache/2.2.14 (Ubuntu)
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.17
       X-Ua-Compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       Etag:
-      - ! '"363f60299b9aba9f95b0dd3db98fb049"'
+      - ! '"8cef4b17860e39dc513506b0aa385496"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d94fcceedb0bac5cc61e8e64ee42bad0
+      - 4cbc6dc59e3ca826f76ddecbe46fb62f
       X-Runtime:
-      - '0.019759'
-      Content-Length:
-      - '69'
-      Server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      Date:
-      - Sun, 14 Oct 2012 13:59:13 GMT
-      Connection:
-      - Keep-Alive
+      - '0.447327'
+      X-Rack-Cache:
+      - invalidate, pass
       Set-Cookie:
-      - _get_feedback_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNlNWExMDA5NjdiOGY4YTAwNzQ0YjE5ZTM0ODAxYTI0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWUwMmIrZWZCaEtmWG9CWU40WjVjU1J3eUlNTjNFTS9sYXhBOEpVbGozUFk9BjsARg%3D%3D--cb6b884d313c9af80e885b214fa0f268d45ed335;
+      - _get_feedback_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJThmZWYxNTMzNzcyNWQxYTFjYWI4NDE2ZTc4OWE4ZWFkBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWNweWhVdjFlM0t0c3JmY0FhcndiT2Q1SnI5VmcwNi9iQmNnbktFYklXcDA9BjsARg%3D%3D--495418c28ab14109964f99648c06450b9bc8939a;
         path=/; HttpOnly
+      Status:
+      - '200'
+      Content-Length:
+      - '135'
+      Content-Type:
+      - application/json; charset=utf-8
     body:
       encoding: US-ASCII
-      string: ! '{"question":{"admin_link":"26-admin-RR12","feedback_link":"26-RR12"}}'
+      string: ! '{"question":{"admin_link":"http://get-feedback.at/questions/7-admin-RR12","feedback_link":"http://get-feedback.at/answers/new.7-RR12"}}'
     http_version: 
-  recorded_at: Sun, 14 Oct 2012 13:59:13 GMT
+  recorded_at: Sun, 14 Oct 2012 15:32:19 GMT
 recorded_with: VCR 2.2.5

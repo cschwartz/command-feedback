@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require "command_feedback"
+require "optparse"
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage command-feedback [options] title choice1 choice2 ..."
+
+  options[:description] = ""
+  opts.on('-d', '--description DESCRIPTION', 'Add a description to the survey') do |description|
+    options[:description] =  description
+  end
+
+  opts.on('-h', '--help', 'Display this screen') do
+    puts opts
+    exit
+  end
+end
+
+
+optparse.parse!
+
+if ARGV.length > 2
+  title = ARGV.shift
+  choices = ARGV
+  description = options[:description]
+  feedback = CommandFeedback::Service.get_feedback title, choices, description
+  if feedback.successfull?
+    puts "Successfully created the feedback:"
+    puts "\t* Administration Link: #{ feedback.admin_link }"
+    puts "\t* Feedback Link: #{ feedback.feedback_link }"
+  else
+    puts "Failed to create the feedback:"
+    puts "\t* #{feedback.errors.join "\n\t* "}"
+  end
+else
+  puts optparse
+end
